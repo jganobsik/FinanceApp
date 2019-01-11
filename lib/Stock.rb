@@ -1,14 +1,18 @@
 Class Stock
 
-Attr_accessor :symbol, :price, :earnings, :ebit
+attr_accessor :symbol, :price, :earnings, :ebit, :marketcap, :eps, :sharesoutstanding
 
-Def initialize(symbol)
+def initialize(symbol)
 @symbol = symbol
-End
+end
 
-Def P/E(price, earnings)
-Return price / earnings
-End
+def eps
+ return @earnings / @sharesoutstanding
+end
+
+def pe
+return @price / @earnings
+end
 
 
-End
+end
